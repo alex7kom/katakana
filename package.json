@@ -1,6 +1,6 @@
 {
   "name": "katakana",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Конвертация русских слов в катакану",
   "main": "src/transform.js",
   "author": "Alexey Komarov <alex7kom@gmail.com>",
