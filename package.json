@@ -1,0 +1,15 @@
+{
+  "name": "katakana",
+  "version": "0.0.1",
+  "description": "Конвертация русских слов в катакану",
+  "main": "src/transform.js",
+  "author": "Alexey Komarov <alex7kom@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.4.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
