@@ -1,16 +1,14 @@
 module.exports = replace;
 
 function replace (syllable, index, syllables) {
-  if (singlesConsonants[syllable] //) {
-    // if (
+  if (
+    singlesConsonants[syllable]
     && !(
       syllables.length > index + 1
       && syllables[index + 1][0] === syllable
       )
-    ) {
-      // удвоение
-    //   return syllable;
-    // }
+  ) {
+    // нет удвоения, заменяем на полный слог
     return replace.call(this, singlesConsonants[syllable], index, syllables);
   }
 
@@ -132,5 +130,3 @@ var singlesConsonants = {
   'ш': 'щи',
   'щ': 'щи'
 };
-
-var doubleConsonants = ['м', 'н'];
