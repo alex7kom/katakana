@@ -1,5 +1,5 @@
 var vowels = [
-  'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'
+  'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я', 'ь'
 ];
 
 var consonants = [
@@ -9,7 +9,7 @@ var consonants = [
 
 var complexSyllables = ['дз'];
 
-var special = ['ъ', 'ь'];
+var special = ['ъ'];
 
 function syllable (word) {
   var arr = word.split('');
