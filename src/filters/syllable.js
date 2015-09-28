@@ -7,6 +7,8 @@ var consonants = [
   'н', 'п', 'р', 'с', 'т', 'ф', 'ц', 'ч', 'х', 'ш', 'щ'
 ];
 
+var complexSyllables = ['дз'];
+
 var special = ['ъ', 'ь'];
 
 function syllable (word) {
@@ -31,7 +33,13 @@ function syllable (word) {
       endSyllable();
     } else if (
       consonants.indexOf(letter) !== -1
-      && currentSyllable.length !== 0
+      && complexSyllables.indexOf(currentSyllable.join('') + letter) !== -1
+    ) {
+      // если согласная, и уже есть другие буквы в слоге, проверяем на сложный слог
+      addLetter(letter);
+    } else if (
+      consonants.indexOf(letter) !== -1
+      && currentSyllable.length !== 0 
     ) {
       // если согласная, и уже есть буквы в слоге
       if (
