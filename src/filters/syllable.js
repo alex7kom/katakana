@@ -26,7 +26,7 @@ function syllable (word) {
     currentSyllable.push(letter);
   }
 
-  arr.forEach(function (letter, index, item) {
+  arr.forEach(function (letter) {
     if (vowels.indexOf(letter) !== -1) {
       // гласная всегда заканчивает слог
       addLetter(letter);
