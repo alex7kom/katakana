@@ -1,15 +1,5 @@
 module.exports = katakanize;
 
-function katakanize (syllable, index, syllables) {
-  if (smartPairs[syllable] && this.smart) {
-    return smartPairs[syllable];
-  }
-  if (commonPairs[syllable]) {
-    return commonPairs[syllable];
-  }
-  return syllable;
-}
-
 var commonPairs = {
   'а': 'ア',
   'и': 'イ',
@@ -192,3 +182,13 @@ var smartPairs = {
 
   'шэ': 'シェ'
 };
+
+function katakanize (syllable, index, syllables) {
+  if (smartPairs[syllable] && this.smart) {
+    return smartPairs[syllable];
+  }
+  if (commonPairs[syllable]) {
+    return commonPairs[syllable];
+  }
+  return syllable;
+}

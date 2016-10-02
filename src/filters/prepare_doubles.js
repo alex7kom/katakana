@@ -1,15 +1,5 @@
 module.exports = prepareDoubles;
 
-function prepareDoubles (syllable, index, syllables) {
-  if (
-    singlesConsonants.indexOf(syllable) !== -1
-    && doubleConsonants.indexOf(syllable) === -1
-  ) {
-    return '+';
-  }
-  return syllable;
-}
-
 var singlesConsonants = [
   'б',
   'в',
@@ -33,3 +23,13 @@ var singlesConsonants = [
 ];
 
 var doubleConsonants = ['н', 'м'];
+
+function prepareDoubles (syllable, index, syllables) {
+  if (
+    singlesConsonants.indexOf(syllable) !== -1
+    && doubleConsonants.indexOf(syllable) === -1
+  ) {
+    return '+';
+  }
+  return syllable;
+}
